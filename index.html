@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&display=swap');
+    </style>
+    <title>NoeoPad</title>
+</head>
+<body>
+    <main class="main">
+        <header class="menu-bar">
+            <h1 class="logo">NoeoPad</h1>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search notes...">
+                <button id="search-btn">Search</button>
+            </div>
+            <nav class="nav-buttons">
+                <button id="notes-btn" class="active">Notes</button>
+                <button id="todo-btn" class="todo-page">To-Do List</button>
+            </nav>
+        </header>
+
+        <!-- Notes Section -->
+        <section id="notes-section" class="section-content active">
+            <div id="notes-list" class="content-grid">
+                <!-- Note cards will be dynamically added here -->
+            </div>
+            <button id="create-note" class="create-btn">Create New Note +</button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section id="todo-section" class="section-content">
+            <div id="todo-list" class="content-grid">
+                <!-- Todo items will be dynamically added here -->
+            </div>
+            <button id="create-todo" class="create-btn">Add New Task +</button>
+        </section>
+    </main>
+
+    <!-- Note Modal -->
+    <div class="modal note-box">
+        <div class="modal-header">
+            <h2 class="note-title">Note</h2>
+            <button class="exit-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="note-title-input" placeholder="Title" class="title-input">
+            <textarea id="note-input" placeholder="Write your note here..."></textarea>
+        </div>
+        <div class="modal-footer">
+            <button id="add-note-btn" class="action-btn">Save</button>
+            <button id="clear-note-btn" class="action-btn secondary">Clear</button>
+        </div>    
+    </div>
+
+    <!-- Todo Modal -->
+    <div class="modal todo-box">
+        <div class="modal-header">
+            <h2 class="todo-title">New Task</h2>
+            <button class="exit-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="todo-title-input" placeholder="Task" class="title-input">
+            <input type="date" id="todo-date" class="date-input">
+            <select id="todo-priority" class="priority-select">
+                <option value="low">Low Priority</option>
+                <option value="medium" selected>Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button id="add-todo-btn" class="action-btn">Save Task</button>
+            <button id="clear-todo-btn" class="action-btn secondary">Clear</button>
+        </div>    
+    </div>
+
+    <footer class="bottom-menu">
+        <div class="theme-toggle">
+            <span id="theme-label">Light Mode</span>
+            <button id="theme-toggle-btn">
+                <img src="icons/toggle_on_icon.svg" alt="toggle theme" id="theme-icon">
+            </button>
+        </div>
+        <div class="settings">
+            <button id="settings-btn">
+                <img src="icons/settings_icon.svg" alt="settings">
+            </button>
+            <button id="delete-all-btn">
+                <img src="icons/delete_icon.svg" alt="delete all">
+            </button>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
