@@ -506,9 +506,14 @@ body {
     }
     
     .search-container {
-        width: 80%;
-        max-width: 400px;
+        width: 100%;
+        justify-content: center;
+        max-width: 350px;
         margin: 10px 0;
+    }
+
+    #search-bar {
+        font-size: 0.9rem;
     }
     
     .nav-buttons {
@@ -844,5 +849,6 @@ body {
     }
 
 }
+
 
 
