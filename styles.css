@@ -507,7 +507,7 @@ body {
     
     .search-container {
         width: 100%;
-        max-width: 200px;
+        max-width: 400px;
         margin: 10px 0;
     }
     
@@ -844,3 +844,4 @@ body {
     }
 
 }
+
