@@ -507,7 +507,7 @@ body {
     
     .search-container {
         width: 100%;
-        max-width: none;
+        max-width: 200px;
         margin: 10px 0;
     }
     
@@ -842,4 +842,5 @@ body {
     .task-detail-grid {
         grid-template-columns: 1fr;
     }
+
 }
